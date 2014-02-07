@@ -1,5 +1,6 @@
 gris_oscuro = #444
 azul = #22bce0
+naranja = #dd4f24
 
 body
 	background #e8e8e8
@@ -9,8 +10,12 @@ body
 
 header
 	background gris_oscuro
+	box-shadow 0 5px 0 rgba(0,0,0,.2)
 	color white
 	padding .5em
+	position relative
+	overflow hidden
+
 
 	.logo
 		border-right 1px solid azul
@@ -26,16 +31,79 @@ header
 			margin 0
 			padding 0
 
+		.filtro
+			color azul
+			font-size 14px
+			font-style italic
+			font-weight bold
+			text-decoration none
+
+		.publicar
+			background naranja
+			color white
+			font-style italic
+			padding .2em .5em
+			text-decoration none
+			text-shadow 1px 1px 0px black
+
 	.usuario
+		position absolute
+		top 10px
+		right 10px
 		.avatar
+			margin 0 1.1em 0 0
 			padding 0
-			margin 0
+			z-index 2
+			position relative
 			img
 				width 50px
 				border-radius 50%
 
+		.flechita
+			background naranja
+			color white
+			display block
+			position absolute
+			top 15px
+			right 0
+			padding 2px
+			text-align right
+			text-decoration none
+			width 50%
+			z-index 0
+
 nav 
 	background azul
+	border-left 15px solid white
+
+	.menu
+		margin 0
+		padding 0
+		padding-left 2em
+		height 40px
+		line-height 40px
+		white-space nowrap
+		overflow-x auto
+
+		li
+			display inline-block
+			// float left
+			// list-style none
+			padding 0
+			margin 0
+			
+
+			a
+				text-decoration none
+				display block
+				padding 0 .4em
+				color white
+	
+
+			a:hover
+				background naranja
+				// border-right 1px solid gris_oscuro
+
 
 .left
 	float left
